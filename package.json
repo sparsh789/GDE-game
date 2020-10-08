@@ -1,0 +1,39 @@
+{
+  "name": "ReturnOfJaadu",
+  "version": "0.1.0",
+  "description": "GDE final game",
+  "private": "true",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "prebuild": "npm run lint",
+    "build": "webpack --config webpack.prod.js",
+    "postbuild": "node postbuild.js",
+    "lint": "prettier --check \"src/**/*.js\" && npx eslint \"src/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sparsh789/gde_game.git"
+  },
+  "keywords": [
+    "game",
+    "GDE"
+  ],
+  "devDependencies": {
+    "archiver": "^3.1.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^6.2.1",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-loader": "^2.2.1",
+    "html-webpack-inline-source-plugin": "0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "1.18.2",
+    "svg-inline-loader": "^0.8.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "kontra": "^6.3.0"
+  }
+}
